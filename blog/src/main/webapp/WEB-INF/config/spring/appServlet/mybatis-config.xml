@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!-- db 정보 파일을 로드한다. -->
+    <properties resource="config.properties" />
+	<settings>
+	    <setting name="lazyLoadingEnabled" value="false"/>
+	</settings>
+	
+	<!-- vo 클래스에 대한 alias 설정 -->
+	<typeAliases>
+  		<typeAlias alias="ContModel" type="com.kait.conv.model.ContModel" />
+	</typeAliases>
+
+    <!-- sql 맵퍼 -->
+    <mappers>
+		<mapper url="file:///${cube.csPath}/sql/Cont.xml" />
+    </mappers>
+    
+</configuration>
+
